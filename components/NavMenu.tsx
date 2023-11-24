@@ -66,7 +66,7 @@ export default function NavMenu() {
                     className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
                     href="/"
                   >
-                    <img className="h-6 w-6" src="/public/next.svg"/>
+                    <img className="h-100 w-100" src="/vercel.svg"/>
                     <div className="mb-2 mt-4 text-lg font-medium">
                       shadcn/ui
                     </div>
@@ -77,13 +77,13 @@ export default function NavMenu() {
                   </a>
                 </NavigationMenuLink>
               </li>
-              <ListItem href="/docs" title="Introduction">
+              <ListItem href="/docs" title="平臺簡介">
                 Re-usable components built using Radix UI and Tailwind CSS.
               </ListItem>
-              <ListItem href="/docs/installation" title="Installation">
+              <ListItem href="/docs/installation" title="特色服務">
                 How to install dependencies and structure your app.
               </ListItem>
-              <ListItem href="/docs/primitives/typography" title="Typography">
+              <ListItem href="/docs/primitives/typography" title="實際案例">
                 Styles for headings, paragraphs, lists...etc
               </ListItem>
             </ul>
