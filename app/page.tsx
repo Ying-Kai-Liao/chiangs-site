@@ -4,7 +4,7 @@ import Hero from "@/components/home/Hero"
 
 export default function Home() {
   return (
-    <main className="flex flex-col justify-center items-center bg-red-400 space-y-10 w-screen">
+    <main className="flex flex-col justify-center items-center space-y-10 w-screen">
       <Hero/>
       <Chatbox />
       <CustomerService />
