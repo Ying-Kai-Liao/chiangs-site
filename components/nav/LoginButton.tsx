@@ -60,12 +60,9 @@ export default function LoginButton() {
           <DialogTitle>登入或註冊以繼續使用...</DialogTitle>
         </DialogHeader>
         <div className="min-h-[100px] flex justify-center items-center">
-          {/* <Button onClick={() => socialAction('google')} variant="outline" size="icon">
-            <BsGoogle className="h-6 w-6" />
-          </Button> */}
-          <button className="w-full mx-5 border py-2 rounded-lg" onClick={() => socialAction('google')}>
-            <BsGoogle className="h-6 w-6  inline "/> <span className="pl-3">以 Google 繼續登入 </span>
-          </button>
+          <Button className="w-full mx-5 border py-2 rounded-lg" onClick={() => socialAction('google')}>
+            <BsGoogle className="h-4 w-4  inline "/> <span className="pl-3">以 Google 繼續登入 </span>
+          </Button>
         </div>
       </DialogContent>
     </Dialog>

@@ -1,0 +1,38 @@
+.coloured-slider {
+  transition: transform 0.2s;
+  --divider-width: 3px;
+  --divider-color: rgba(255, 255, 255, 0.5);
+  --hover-divider-width: 6px;
+  --hover-divider-color: rgba(255, 255, 255, 1);
+}
+
+.coloured-slider:hover .divider {
+  --divider-width: var(--hover-divider-width);
+}
+/* deprecated label  */
+.before,
+.after {
+  margin: 0;
+}
+
+.before figcaption,
+.after figcaption {
+  background: #fff;
+  border: 1px solid #c0c0c0;
+  border-radius: 12px;
+  color: #2e3452;
+  opacity: 0.8;
+  padding: 12px;
+  position: absolute;
+
+  transform: translateY(-50%);
+  line-height: 100%;
+}
+
+.before figcaption {
+  left: 12px;
+}
+
+.after figcaption {
+  right: 12px;
+}

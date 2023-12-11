@@ -1,6 +1,6 @@
 import Chatbox from "@/components/ChatBox"
 import CustomerService from "@/components/CustomerService"
-import Hero from "@/components/home/Hero"
+import Hero from "@/components/home/Hero/Hero"
 
 export default function Home() {
   return (

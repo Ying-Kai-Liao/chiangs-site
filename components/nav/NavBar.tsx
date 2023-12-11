@@ -21,7 +21,7 @@ const NavBar = () => {
 
   useEffect (() => {
     if (session?.data?.user.role === "admin") {
-      router.push('/admin')
+      console.log('hello admin')
     }
   }, [session.data?.user.role, router])
 
