@@ -43,7 +43,7 @@ const BlogPostCarousel = () => {
   return (
     <section className="bg-neutral-100 py-8" ref={ref}>
       <div className="relative overflow-hidden p-4">
-        <div className="mx-auto max-w-6xl">
+        <div className="mx-auto max-w-screen md:max-w-6xl">
           <div className="flex items-center justify-between">
             <h2 className="mb-4 text-4xl">The Team Blog</h2>
 
