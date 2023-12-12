@@ -2,6 +2,8 @@
 
 import * as React from "react"
 import Link from "next/link"
+import Image from "next/image"
+import { useTranslation } from 'react-i18next';
 
 import { cn } from "@/lib/utils"
 import {
@@ -53,6 +55,7 @@ const components: { title: string; href: string; description: string }[] = [
 ]
 
 export default function NavMenu() {
+  const {t} = useTranslation()
   return (
     <NavigationMenu className="">
       <NavigationMenuList className="space-x-1">
@@ -66,7 +69,7 @@ export default function NavMenu() {
                     className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
                     href="/"
                   >
-                    <img className="h-100 w-100" src="/vercel.svg"/>
+                    <Image width={100} height={100} src="/vercel.svg" alt=""/>
                     <div className="mb-2 mt-4 text-lg font-medium">
                       shadcn/ui
                     </div>
@@ -81,7 +84,7 @@ export default function NavMenu() {
                 Re-usable components built using Radix UI and Tailwind CSS.
               </ListItem>
               <ListItem href="/docs/installation" title="特色服務">
-                How to install dependencies and structure your app.
+              {t("welcome")}
               </ListItem>
               <ListItem href="/docs/primitives/typography" title="實際案例">
                 Styles for headings, paragraphs, lists...etc
@@ -106,14 +109,14 @@ export default function NavMenu() {
           </NavigationMenuContent>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <Link href="/docs" legacyBehavior passHref>
+          <Link href="/pricing" legacyBehavior passHref>
             <NavigationMenuLink className={`${navigationMenuTriggerStyle()} bg-transparent`}>
               價格
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <Link href="/docs" legacyBehavior passHref>
+          <Link href="/contactUs" legacyBehavior passHref>
             <NavigationMenuLink className={`${navigationMenuTriggerStyle()} bg-transparent`}>
               聯絡我們
             </NavigationMenuLink>

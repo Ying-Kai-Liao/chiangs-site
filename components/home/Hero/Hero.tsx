@@ -7,10 +7,8 @@ import { pian } from "@/font/Fonts";
 import { Button } from "@/components/ui/button";
 import { Slider } from "@/components/ui/slider";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import VideoPlayer from "@/components/Video";
-import ImageSlider from "../../imageComparisonSlider/Slider";
-import VideoHero from "./VideoComponent";
-import NewVideo from "@/components/newVideo";
+import ImageSlider from "../../Diff";
+import NewVideo from "@/components/Video";
 
 const imageItemStyle = `
   max-w-[calc(33.3%-40px)] 
@@ -80,7 +78,7 @@ export default function Hero() {
           <aside className="flex justify-center items-center h-screen p-6 md:p-12">
             <ImageSlider className="max-w-[60%] max-h-[60%]"/>
           </aside>
-          <div className="flex items-center justify-center rounded-2xl">
+          <div className="flex items-center justify-center">
             {/* <VideoHero src={src}/> */}
             <NewVideo src={src}/>
           </div>

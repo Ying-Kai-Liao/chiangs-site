@@ -2,6 +2,7 @@
 
 import NextImage from "next/image";
 import { useState, useEffect } from "react";
+import {motion} from 'framer-motion'
 
 type ImageComparisonSliderProps = {
   className?: string;
@@ -51,9 +52,9 @@ export default function Slider({
   };
 
   return (
-    <div className={`w-full relative h-full ${className}`} onMouseUp={handleMouseUp}>
+    <div className={`w-full relative h-full overflow-hidden rounded-[20px] bg-black/50 p-1 transition-all duration-500 hover:scale-[1.05] hover:bg-fancy ${className}`} onMouseUp={handleMouseUp}>
       <div
-        className={`relative w-full m-auto max-w-[1/2] h-full overflow-hidden select-none rounded-3xl`}
+        className={`relative w-full m-auto max-w-[1/2] h-full overflow-hidden select-none rounded-2xl`}
         onMouseMove={handleMove}
         onMouseDown={handleMouseDown}
         onMouseEnter={() => setIsHovered(true)}
@@ -80,7 +81,7 @@ export default function Slider({
           }}
         >
           <div className={`absolute top-0 bottom-0 left-1/2 duration-1000 transition-colors transform -translate-x-1/2 w-3  ${
-              isHovered ? "bg-fancy w-5" : "bg-white/50"
+              isHovered ? "bg-white/80" : "bg-white/20"
             }`}></div>
           <svg
             className={`relative top-2/3 left-1/2 transform -translate-x-1/2 -translate-y-1/2 duration-300 ${

@@ -7,6 +7,7 @@ import { useRouter } from "next/navigation";
 import NavMenu from "@/components/nav/NavMenu";
 import UserNav from "./UserNav";
 import LoginButton from "./LoginButton";
+import ToggleLanguage from "./ToggleLanguage";
 
 const NavBar = () => {
   const [lastScrollTop, setLastScrollTop] = useState(0);
@@ -54,6 +55,7 @@ const NavBar = () => {
               && 
               <UserNav avatarUrl={avatarUrl} userEmail={userEmail} userName={userName}/>
             }
+            <ToggleLanguage/>
             { session.status === "unauthenticated" 
               && 
               <LoginButton/>

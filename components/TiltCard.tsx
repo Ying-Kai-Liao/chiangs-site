@@ -66,9 +66,16 @@ export default function TiltCard({ children }: TiltCardProps) {
         }}
         className="absolute inset-4 grid place-content-center rounded-xl bg-white shadow-lg"
       >
-        <video loop muted autoPlay playsInline poster="/After.jpg">
-          <source src={src} />
-        </video>
+        <div
+          style={{
+            transform: "translateZ(50px)",
+          }}
+          className=""
+        >
+          <video loop muted autoPlay playsInline poster="/After.jpg">
+            <source src={src} />
+          </video>
+        </div>
       </div>
     </motion.div>
   );
