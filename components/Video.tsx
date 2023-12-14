@@ -6,7 +6,7 @@ type VideoProps = {
 };
 
 export default function NewVideo({
-  src = "/videos/demoVR.mp4",
+  src = "https://cdn.discordapp.com/attachments/1179870788640317562/1184817526006370345/video_2160p-2.mp4?ex=658d5a4f&is=657ae54f&hm=adaa7a109a61cf5039c20b1722db9e27fac99db75e18a95fa14d60a4b73d1c5e&",
   className,
 }: VideoProps) {
   const x = useMotionValue(0);

@@ -6,9 +6,11 @@ import { useState, useEffect } from "react";
 import { pian } from "@/font/Fonts";
 import { Button } from "@/components/ui/button";
 import { Slider } from "@/components/ui/slider";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import ImageSlider from "../../Diff";
 import NewVideo from "@/components/Video";
+
+// #65152f dark light #98204f
 
 const imageItemStyle = `
   max-w-[calc(33.3%-40px)] 
@@ -40,8 +42,7 @@ const videoJsOptions = {
   muted: true,
 };
 
-// const src= "https://cdn.discordapp.com/attachments/1179870788640317562/1181224828808745040/pexels-photo-415829.mp4?ex=65804859&is=656dd359&hm=848d0bc5e5a2e8d2f095b94e2cd21b5552133f16f2ff2edb96c31d399cc8cf10&"
-const src= "/videos/demoVR.mp4"
+const src = "https://cdn.discordapp.com/attachments/1179870788640317562/1184817526006370345/video_2160p-2.mp4?ex=658d5a4f&is=657ae54f&hm=adaa7a109a61cf5039c20b1722db9e27fac99db75e18a95fa14d60a4b73d1c5e&";
 
 export default function Hero() {
   const imageList = [
@@ -55,10 +56,10 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className={`flex flex-col justify-center items-center w-screen ${pian.className}`}
+      className={`flex flex-col justify-center items-center w-screen bg-gradient-to-r from-pink-700 via-pink-700 to-pink-900 ${pian.className}`}
     >
-      <div className="w-full mx-auto ">
-        <div className="flex justify-center flex-col bg-grid-slate-100">
+      <div className="w-full mx-auto h-full">
+        <div className="flex h-full">
           {/* <div className="flex flex-wrap flex-start justify-start items-center w-1/2 px-10">
             {imageList.map((image, index) => (
               <div
@@ -75,14 +76,14 @@ export default function Hero() {
               </div>
             ))}
           </div> */}
-          <aside className="flex justify-center items-center h-screen p-6 md:p-12">
-            <ImageSlider className="max-w-[60%] max-h-[60%]"/>
+          <aside className="flex justify-start items-center h-screen w-3/5 ">
+            <ImageSlider className="max-w-[100%] max-h-[100%]" />
           </aside>
-          <div className="flex items-center justify-center">
-            {/* <VideoHero src={src}/> */}
-            <NewVideo src={src}/>
-          </div>
         </div>
+      </div>
+      <div className="flex items-center justify-center">
+        {/* <VideoHero src={src}/> */}
+        <NewVideo src={src} />
       </div>
 
       <button className="mt-10 text-4xl border-dashed border-black border-2 p-2">

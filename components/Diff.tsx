@@ -52,7 +52,7 @@ export default function Slider({
   };
 
   return (
-    <div className={`w-full relative h-full overflow-hidden rounded-[20px] bg-black/50 p-1 transition-all duration-500 hover:scale-[1.05] hover:bg-fancy ${className}`} onMouseUp={handleMouseUp}>
+    <div className={`w-full relative h-full overflow-hidden rounded-[20px] ${className}`} onMouseUp={handleMouseUp}>
       <div
         className={`relative w-full m-auto max-w-[1/2] h-full overflow-hidden select-none rounded-2xl`}
         onMouseMove={handleMove}
@@ -80,7 +80,7 @@ export default function Slider({
             left: `calc(${sliderPosition}% - 40px)`,
           }}
         >
-          <div className={`absolute top-0 bottom-0 left-1/2 duration-1000 transition-colors transform -translate-x-1/2 w-3  ${
+          <div className={`absolute top-0 bottom-0 left-1/2 duration-500 transition-colors transform -translate-x-1/2 w-3  ${
               isHovered ? "bg-white/80" : "bg-white/20"
             }`}></div>
           <svg
@@ -117,8 +117,8 @@ export default function Slider({
             left: `calc(${sliderPosition}% - 129px)`,
           }}
         >
-            <span className={`text-xl text-white p-4 rounded-full transition-all ${isHovered ? "bg-black/50 visible" : "invisible"}`}>Before</span>
-            <span className={`text-xl text-white p-4 rounded-full transition-all ${isHovered ? "bg-black/50 visible" : "invisible"}`}>After</span>
+            {/* <span className={`text-xl text-white p-4 rounded-full transition-all ${isHovered ? "bg-black/50 visible" : "invisible"}`}>Before</span>
+            <span className={`text-xl text-white p-4 rounded-full transition-all ${isHovered ? "bg-black/50 visible" : "invisible"}`}>After</span> */}
         </div>
       </div>
     </div>

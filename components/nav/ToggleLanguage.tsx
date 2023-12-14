@@ -46,7 +46,7 @@ const ToggleLanguage = () => {
         <motion.span
           layout
           transition={{ type: "spring", damping: 15, stiffness: 250 }}
-          className="h-full w-1/2 rounded-full bg-gradient-to-r from-pink-400 to-rose-500"
+          className="h-full w-1/2 rounded-full bg-[#996168]"
         />
       </div>
     </div>

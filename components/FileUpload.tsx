@@ -38,7 +38,10 @@ function FileUpload() {
         method: "POST",
         body: formData,
       })
-        .then((response) => response.json())
+        .then((response) => {
+          response.json()
+          console.log(response.json())
+        })
         .then((data) => console.log(data))
         .catch((error) => console.error("Error:", error));
 

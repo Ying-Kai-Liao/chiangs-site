@@ -10,8 +10,7 @@ import LoginButton from "./LoginButton";
 import ToggleLanguage from "./ToggleLanguage";
 
 const NavBar = () => {
-  const [lastScrollTop, setLastScrollTop] = useState(0);
-  const [isVisible, setIsVisible] = useState(true);
+  const [isTop, setIsTop] = useState(true); // Renamed for clarity
   const session = useSession();
   const router = useRouter();
 
@@ -30,32 +29,32 @@ const NavBar = () => {
     const handleScroll = () => {
       const currentScrollTop =
         window.scrollY || document.documentElement.scrollTop;
-      setIsVisible(currentScrollTop < lastScrollTop || currentScrollTop === 0);
-      setLastScrollTop(currentScrollTop);
+      setIsTop(currentScrollTop <= 1); // Set isTop true only at the top of the page
     };
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [lastScrollTop]);
+  }, []);
 
   return (
     <header>
       <nav
-        className={`backdrop-blur-sm bg-white/25 font-normal w-full fixed top-0 left-0 z-50 px-2 md:px-4 transition-transform duration-300 ${
-          isVisible ? "transform-y-0" : "transform-y-0"
+        className={` text-red-100 font-normal w-full fixed top-0 left-0 z-50 px-2 md:px-4 transition-colors duration-300 ${
+          isTop ? 'bg-transparent' : 'bg-white/25 backdrop-blur-sm'
         }`}
       >
-        <div className="container mx-auto max-w-[1170px] flex items-center font-small justify-between py-3 ">
+        <div className="container mx-auto max-w-[1170px] flex items-center font-small justify-between py-3 space-x-5">
           <Link href={"/"} className="w-[120px] md:w-[150px] py-3 md:py-2">
             LOGO
           </Link>
+          <div className="grow"></div>
           <NavMenu />
-          <div className="flex flex-row justify-center items-center space-x-5">
+          <ToggleLanguage />
+          <div className="flex flex-row justify-center items-center">
             { session.status === "authenticated" 
               && 
               <UserNav avatarUrl={avatarUrl} userEmail={userEmail} userName={userName}/>
             }
-            <ToggleLanguage/>
             { session.status === "unauthenticated" 
               && 
               <LoginButton/>
