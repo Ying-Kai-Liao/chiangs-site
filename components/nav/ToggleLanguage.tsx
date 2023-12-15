@@ -10,7 +10,7 @@ type ToggleOptionsType = "En" | "Ch";
 
 const ToggleLanguage = () => {
   const changeLanguage = (languageCode: string) => {
-    i18n.changeLanguage(languageCode);
+    // i18n.changeLanguage(languageCode);
   };
 
   const [selected, setSelected] = useState<ToggleOptionsType>("En");

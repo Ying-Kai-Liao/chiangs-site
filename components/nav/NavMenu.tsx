@@ -55,7 +55,7 @@ const components: { title: string; href: string; description: string }[] = [
 ]
 
 export default function NavMenu() {
-  const {t} = useTranslation()
+  // const {t} = useTranslation()
   return (
     <NavigationMenu className="">
       <NavigationMenuList className="space-x-1">
@@ -84,7 +84,7 @@ export default function NavMenu() {
                 Re-usable components built using Radix UI and Tailwind CSS.
               </ListItem>
               <ListItem href="/docs/installation" title="特色服務">
-              {t("welcome")}
+              welcome
               </ListItem>
               <ListItem href="/docs/primitives/typography" title="實際案例">
                 Styles for headings, paragraphs, lists...etc

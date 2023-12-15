@@ -1,4 +1,7 @@
 {
     "welcome": "Welcome to React and TypeScript",
-    "greeting": "Hello, how are you?"
+    "greeting": "Hello, how are you?",
+    "welcome:": {
+      "welcome":"Welcome to React and TypeScript"
+    }
   }

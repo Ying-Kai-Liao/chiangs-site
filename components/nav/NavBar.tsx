@@ -9,8 +9,11 @@ import UserNav from "./UserNav";
 import LoginButton from "./LoginButton";
 import ToggleLanguage from "./ToggleLanguage";
 
+type SectionState = "BG-Trans" | "BG-Blur" | "Text-Black"
+
 const NavBar = () => {
   const [isTop, setIsTop] = useState(true); // Renamed for clarity
+  const [section, setSection] = useState<SectionState>('BG-Trans')
   const session = useSession();
   const router = useRouter();
 
@@ -29,7 +32,7 @@ const NavBar = () => {
     const handleScroll = () => {
       const currentScrollTop =
         window.scrollY || document.documentElement.scrollTop;
-      setIsTop(currentScrollTop <= 1); // Set isTop true only at the top of the page
+      currentScrollTop <= 1 ? setSection('BG-Trans') : currentScrollTop <= 1700 ? setSection('BG-Blur') : setSection('Text-Black')
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -39,8 +42,8 @@ const NavBar = () => {
   return (
     <header>
       <nav
-        className={` text-red-100 font-normal w-full fixed top-0 left-0 z-50 px-2 md:px-4 transition-colors duration-300 ${
-          isTop ? 'bg-transparent' : 'bg-white/25 backdrop-blur-sm'
+        className={`  font-normal w-full fixed top-0 left-0 z-50 px-2 md:px-4 transition-colors duration-300 ${
+          section == "BG-Trans" ? ' text-red-100 bg-transparent' : section == "BG-Blur" ? 'text-red-100 bg-white/25 backdrop-blur-sm' : 'text-black'
         }`}
       >
         <div className="container mx-auto max-w-[1170px] flex items-center font-small justify-between py-3 space-x-5">

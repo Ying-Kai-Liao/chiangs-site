@@ -10,7 +10,7 @@ i18n
     debug: true,
     lng: 'en',
     backend: {
-      loadPath: '/locales/{{lng}}/translation.json',
+      loadPath: '/locales/{{lng}}/translation.json'
     },
     interpolation: {
       escapeValue: false,
