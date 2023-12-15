@@ -32,6 +32,11 @@ function FileUpload() {
   };
 
   const handleUpload = async () => {
+    if (session.status == 'unauthenticated') {
+      alert("Please login first!")
+      return
+    }
+
     if (!selectedFile) {
       alert("Please select a file first!");
       return;
