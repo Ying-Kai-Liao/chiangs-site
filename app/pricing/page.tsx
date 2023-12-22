@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const SquishyPricing = () => {
   return (
-    <section className="bg-stone-200 px-4 py-12 h-screen flex justify-center items-center">
+    <section className= "px-4 py-12 h-screen flex justify-center items-center" style={{ background: "linear-gradient(45deg,#b580ff,rgba(225,5,34,0) 70%) repeat scroll 0 0,linear-gradient(135deg,#ef8fe9 10%,rgba(49,5,209,0) 80%) repeat scroll 0 0,linear-gradient(225deg,#efea8f 10%,rgba(10,219,216,0) 80%) repeat scroll 0 0,transparent linear-gradient(315deg,#ef8fd0 100%,rgba(9,245,5,0) 0) repeat scroll 0 0"}}>
       <div className="mx-auto flex w-fit flex-wrap justify-center gap-4">
         <Card
           label="個人"
@@ -24,10 +24,10 @@ const SquishyPricing = () => {
           BGComponent={BackgroundB}
         />
         <Card
-          label="Enterprise"
-          monthlyPrice="4,999"
-          description="For large enterprises looking to outsource their conversion rate optimization"
-          cta="Book a call"
+          label="月租制虛擬人夥伴"
+          monthlyPrice="500"
+          description="忠實的好夥伴"
+          cta="立即購買"
           background="bg-pink-500"
           BGComponent={BackgroundC}
         />

@@ -34,26 +34,26 @@ const Form = ({
     <form
       onSubmit={(e) => e.preventDefault()}
       className={`p-8 w-full text-white transition-colors duration-[750ms] ${
-        selected === "company" ? "bg-indigo-600" : "bg-violet-600"
+        selected === "company" ? "bg-orange-300" : "bg-red-300"
       }`}
     >
       <h3 className="text-4xl font-bold mb-6">Contact us</h3>
 
       {/* Name input */}
       <div className="mb-6">
-        <p className="text-2xl mb-2">Hi 👋! My name is...</p>
+        <p className="text-2xl mb-2">嗨 👋! 我的大名是 ...</p>
         <input
           type="text"
-          placeholder="Your name..."
+          placeholder="如何稱呼 ？"
           className={`${
-            selected === "company" ? "bg-indigo-700" : "bg-violet-700"
+            selected === "company" ? "bg-orange-400" : "bg-red-400"
           } transition-colors duration-[750ms] placeholder-white/70 p-2 rounded-md w-full focus:outline-0`}
         />
       </div>
 
       {/* Company/individual toggle */}
       <div className="mb-6">
-        <p className="text-2xl mb-2">and I represent...</p>
+        <p className="text-2xl mb-2">我是 ...</p>
         <FormSelect selected={selected} setSelected={setSelected} />
       </div>
 
@@ -80,12 +80,12 @@ const Form = ({
             transition={BASE_TRANSITION}
             className="mb-6"
           >
-            <p className="text-2xl mb-2">by the name of...</p>
+            <p className="text-2xl mb-2">代表的公司是 ...</p>
             <input
               type="text"
-              placeholder="Your company name..."
+              placeholder="公司名稱"
               className={`${
-                selected === "company" ? "bg-indigo-700" : "bg-violet-700"
+                selected === "company" ? "bg-orange-400" : "bg-red-400"
               } transition-colors duration-[750ms] placeholder-white/70 p-2 rounded-md w-full focus:outline-0`}
             />
           </motion.div>
@@ -94,11 +94,11 @@ const Form = ({
 
       {/* Info */}
       <div className="mb-6">
-        <p className="text-2xl mb-2">I&apos;d love to ask about...</p>
+        <p className="text-2xl mb-2">我想要了解 ...</p>
         <textarea
-          placeholder="Whatever your heart desires :)"
+          placeholder="任何都可以問 :)"
           className={`${
-            selected === "company" ? "bg-indigo-700" : "bg-violet-700"
+            selected === "company" ? "bg-orange-400" : "bg-red-400"
           } transition-colors duration-[750ms] min-h-[150px] resize-none placeholder-white/70 p-2 rounded-md w-full focus:outline-0`}
         />
       </div>
@@ -114,8 +114,8 @@ const Form = ({
         type="submit"
         className={`${
           selected === "company"
-            ? "bg-white text-indigo-600"
-            : "bg-white text-violet-600"
+            ? "bg-white text-orange-600"
+            : "bg-white text-rose-600"
         } transition-colors duration-[750ms] text-lg text-center rounded-lg w-full py-3 font-semibold`}
       >
         Submit
@@ -135,11 +135,11 @@ const FormSelect = ({
     <div className="border-[1px] rounded border-white overflow-hidden font-medium w-fit">
       <button
         className={`${
-          selected === "individual" ? "text-violet-600" : "text-white"
+          selected === "individual" ? "text-rose-600" : "text-white"
         } text-sm px-3 py-1.5 transition-colors duration-[750ms] relative`}
         onClick={() => setSelected("individual")}
       >
-        <span className="relative z-10">An individual</span>
+        <span className="relative z-10">個人使用者</span>
         {selected === "individual" && (
           <motion.div
             transition={BASE_TRANSITION}
@@ -150,11 +150,11 @@ const FormSelect = ({
       </button>
       <button
         className={`${
-          selected === "company" ? "text-indigo-600" : "text-white"
+          selected === "company" ? "text-amber-600" : "text-white"
         } text-sm px-3 py-1.5 transition-colors duration-[750ms] relative`}
         onClick={() => setSelected("company")}
       >
-        <span className="relative z-10">A company</span>
+        <span className="relative z-10">公司集團代表</span>
         {selected === "company" && (
           <motion.div
             transition={BASE_TRANSITION}

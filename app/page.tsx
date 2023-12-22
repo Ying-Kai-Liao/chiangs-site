@@ -12,8 +12,8 @@ export default function Home() {
       <BlogPostCarousel/>
       <BasicFAQ/>
       <Contact className="w-full h-full flex items-center justify-center"/>
-      <Chatbox />
-      <CustomerService />
+      {/* <Chatbox />
+      <CustomerService /> */}
     </main>
   )
 }

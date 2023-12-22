@@ -110,7 +110,7 @@ const Footer = () => {
           />
         </div>
       )}
-      <div className="bg-stone-500 text-gray-50 text-xs py-3 px-3 font-normal">
+      <div className="bg-black text-gray-50 text-xs py-3 px-3 font-normal">
         <div className="container mx-auto flex justify-between max-w-[1170px]">
           <ul className="flex space-x-6">
             {width > 768 && (

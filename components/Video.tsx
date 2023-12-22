@@ -1,3 +1,4 @@
+'use client'
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 
 type VideoProps = {
@@ -51,7 +52,7 @@ export default function NewVideo({
       style={{ rotateX, rotateY, transformStyle: "preserve-3d" }}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
-      className="rounded-xl bg-transparent flex justify-center w-3/4 p-10"
+      className={`  rounded-xl bg-transparent flex justify-center ${className} w-1/2 p-10`}
     >
       <div
         style={{

@@ -3,6 +3,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import ImageSlider from "@/components/Diff";
 import NewVideo from "@/components/Video";
 import FileUpload from "@/components/FileUpload";
+import DottedButton from "@/components/DottedButton";
 
 // #65152f dark light #98204f
 
@@ -28,13 +29,16 @@ export default function Hero() {
             <div className="absolute left-0 bottom-0 w-full bg-gradient-to-b from-pink-700/0 to-pink-700 h-[15%]" />
             <div className="absolute left-0 bottom-[-15%] w-full bg-gradient-to-b from-pink-700 to-pink-700/0 h-[15%]" />
           </aside>
-          <div className="flex flex-col justify-start items-center h-screen w-2/5">
-            <div className="text-white max-w-md space-y-5 h-1/2 flex flex-col justify-center ">
-              <span className="block text-5xl leading-relaxed tracking-wider">
+          <div className="flex flex-col justify-center items-center h-screen w-2/5">
+            <div className="text-white max-w-md space-y-4 h-1/2 flex flex-col justify-end ">
+              <span className="block text-5xl leading-[62px] tracking-wider">
                 江秉承虛擬人專業虛擬人製造所
               </span>
               <span className="text-xl text-pink-100/70 block">
-                專業虛擬人製造
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry&aposs standard dummy
+                text ever since the 1500s, when an unknown printer took a galley
+                of type and scrambled it to make a type specimen book.
               </span>
             </div>
             <div className="flex flex-col justify-center h-1/2 w-full">
@@ -43,11 +47,22 @@ export default function Hero() {
           </div>
         </div>
       </div>
-      <div className="flex flex-col items-center justify-center ">
-        <NewVideo src={videoSrc} />
-        <button className="text-4xl border-dashed border-black border-2 p-2 mt-[2%] mb-[15%]">
-          <div className="">瞭解更多</div>
-        </button>
+      <div className="flex flex-col items-center justify-center pb-[15%]">
+        <div className="flex justify-center items-center px-5 pb-[5%]">
+          <div className="text-white max-w-sm space-y-4 flex flex-col justify-end">
+            <span className="block text-5xl leading-[62px] tracking-wider">
+              江秉承虛擬人專業虛擬人製造所
+            </span>
+            <span className="text-xl text-pink-100/70 block">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry&aposs standard dummy text
+              ever since the 1500s, when an unknown printer took a galley of
+              type and scrambled it to make a type specimen book.
+            </span>
+          </div>
+          <NewVideo src={videoSrc}/>
+        </div>
+        <DottedButton label="了解更多" />
       </div>
     </section>
   );

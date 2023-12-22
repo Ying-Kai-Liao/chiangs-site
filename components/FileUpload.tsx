@@ -1,6 +1,6 @@
 "use client";
 
-import { useSession } from "next-auth/react";
+import { signIn, useSession } from "next-auth/react";
 import React, { useState } from "react";
 import Image from "next/image";
 
@@ -33,7 +33,10 @@ function FileUpload() {
 
   const handleUpload = async () => {
     if (session.status == 'unauthenticated') {
-      alert("Please login first!")
+      const loginButton = document.getElementById('login');
+      if (loginButton) {
+        loginButton.click();
+      }
       return
     }
 
@@ -121,7 +124,7 @@ function FileUpload() {
           {preview && (
             <button
               onClick={handleUpload}
-              className="block font-sm py-2 px-4 rounded-md border-0 font-semibold bg-pink-50 text-pink-700 hover:bg-pink-100"
+              className="block font-sm py-2 px-4 rounded-md border-0 font-semibold bg-pink-50 text-pink-700 hover:bg-pink-100 z-10"
             >
               上傳檔案
             </button>
