@@ -1,10 +1,11 @@
 'use client'
+import DottedButton from "@/components/DottedButton";
 import { motion } from "framer-motion";
 
 const SquishyPricing = () => {
   return (
-    <section className= "px-4 py-12 h-screen flex justify-center items-center" style={{ background: "linear-gradient(45deg,#b580ff,rgba(225,5,34,0) 70%) repeat scroll 0 0,linear-gradient(135deg,#ef8fe9 10%,rgba(49,5,209,0) 80%) repeat scroll 0 0,linear-gradient(225deg,#efea8f 10%,rgba(10,219,216,0) 80%) repeat scroll 0 0,transparent linear-gradient(315deg,#ef8fd0 100%,rgba(9,245,5,0) 0) repeat scroll 0 0"}}>
-      <div className="mx-auto flex w-fit flex-wrap justify-center gap-4">
+    <section className= "px-4 py-12 h-fit min-h-screen flex-col justify-center items-center" style={{ background: "linear-gradient(45deg,#b580ff,rgba(225,5,34,0) 70%) repeat scroll 0 0,linear-gradient(135deg,#ef8fe9 10%,rgba(49,5,209,0) 80%) repeat scroll 0 0,linear-gradient(225deg,#efea8f 10%,rgba(10,219,216,0) 80%) repeat scroll 0 0,transparent linear-gradient(315deg,#ef8fd0 100%,rgba(9,245,5,0) 0) repeat scroll 0 0"}}>
+      <div className="mx-auto flex w-fit flex-wrap justify-center gap-4 mt-[10%]">
         <Card
           label="個人"
           monthlyPrice="100"
@@ -31,6 +32,9 @@ const SquishyPricing = () => {
           background="bg-pink-500"
           BGComponent={BackgroundC}
         />
+      </div>
+      <div className="flex items-center justify-center mt-[10%] md:mt-[5%]">
+        <DottedButton label="了解更多" className=""/>
       </div>
     </section>
   );
