@@ -30,7 +30,7 @@ function FileUpload() {
   useEffect(() => {
     // Define the CDN image URL
     const cdnImageUrl =
-      "https://cdn.discordapp.com/attachments/1204070917026881617/1204071017589252136/1.png";
+      "https://cdn.discordapp.com/attachments/1179870788640317562/1180061702813929512/human.png";
 
     const fetchImage = async () => {
       try {
