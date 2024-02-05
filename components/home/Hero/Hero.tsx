@@ -14,7 +14,8 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className={`flex flex-col justify-center items-center w-screen space-y-20 bg-gradient-to-r from-pink-700 via-pink-700 to-pink-900 text-red-100`}
+      // className={`flex flex-col justify-center items-center w-screen space-y-20 bg-gradient-to-r from-pink-700 via-pink-700 to-pink-900 text-red-100`}
+      className={`flex flex-col justify-center items-center w-screen space-y-20 bg-slate-800 text-white`}
     >
       <div className="w-full mx-auto h-full">
         <div className="flex h-full">
@@ -25,9 +26,9 @@ export default function Hero() {
               srcAfter="https://cdn.discordapp.com/attachments/1179870788640317562/1185339975265419345/after.png?ex=658f40e0&is=657ccbe0&hm=f444de42f7bdb45719da1b6b5affb168731c9bebbe07e09afa92236d0a3cf9e9&"
             />
             {/* div for background continuous*/}
-            <div className="absolute left-0 top-0 w-full bg-gradient-to-b from-pink-700 to-pink-700/0 h-[15%]" />
-            <div className="absolute left-0 bottom-0 w-full bg-gradient-to-b from-pink-700/0 to-pink-700 h-[15%]" />
-            <div className="absolute left-0 bottom-[-15%] w-full bg-gradient-to-b from-pink-700 to-pink-700/0 h-[15%]" />
+            {/* <div className="absolute left-0 top-0 w-full bg-gradient-to-b from-pink-700 to-pink-700/0 h-[15%]" /> */}
+            {/* <div className="absolute left-0 bottom-0 w-full bg-gradient-to-b from-pink-700/0 to-pink-700 h-[15%]" /> */}
+            {/* <div className="absolute left-0 bottom-[-15%] w-full bg-gradient-to-b from-pink-700 to-pink-700/0 h-[15%]" /> */}
           </aside>
           <div className="flex flex-col justify-center items-center h-screen w-2/5">
             <div className="text-white max-w-md space-y-4 h-1/2 flex flex-col justify-end ">

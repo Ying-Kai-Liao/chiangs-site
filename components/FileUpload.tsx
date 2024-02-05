@@ -1,15 +1,52 @@
 "use client";
 
 import { signIn, useSession } from "next-auth/react";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 
 const MAX_FILE_SIZE = 4.5 * 1024 * 1024; // 4.5 MB in bytes
 
+async function fetchAndConvertToBlob(cdnImageUrl: string) {
+  try {
+    const response = await fetch(cdnImageUrl);
+    if (!response.ok) {
+      throw new Error(`Failed to fetch image: ${response.status}`);
+    }
+
+    const imageBlob = await response.blob();
+    return imageBlob;
+  } catch (error) {
+    console.error("Error fetching and converting image:", error);
+    return null;
+  }
+}
+
 function FileUpload() {
   const session = useSession();
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
+  const [imageBlob, setImageBlob] = useState<File | Blob | null>(null);
   const [preview, setPreview] = useState<string | ArrayBuffer | null>(null);
+
+  useEffect(() => {
+    // Define the CDN image URL
+    const cdnImageUrl =
+      "https://cdn.discordapp.com/attachments/1204070917026881617/1204071017589252136/1.png";
+
+    const fetchImage = async () => {
+      try {
+        const response = await fetch(cdnImageUrl);
+        if (!response.ok) {
+          throw new Error(`Failed to fetch image: ${response.status}`);
+        }
+        const blob = await response.blob();
+        setImageBlob(blob);
+      } catch (error) {
+        console.error("Error fetching image:", error);
+      }
+    };
+
+    fetchImage();
+  }, []);
 
   const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     if (event.target.files == null) {
@@ -32,12 +69,12 @@ function FileUpload() {
   };
 
   const handleUpload = async () => {
-    if (session.status == 'unauthenticated') {
-      const loginButton = document.getElementById('login');
+    if (session.status == "unauthenticated") {
+      const loginButton = document.getElementById("login");
       if (loginButton) {
         loginButton.click();
       }
-      return
+      return;
     }
 
     if (!selectedFile) {
@@ -48,6 +85,9 @@ function FileUpload() {
     const formData = new FormData();
     formData.append("fileToUpload", selectedFile);
     formData.append("email", session.data?.user.email as string | "");
+    formData.append("method", "/fusion1");
+
+    if (imageBlob) formData.append("fileToUpload", imageBlob);
 
     try {
       const response = await fetch("/api/fileUpload", {
