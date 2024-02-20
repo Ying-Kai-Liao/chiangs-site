@@ -53,7 +53,7 @@ export default function LoginButton() {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button id="login"  variant="outline" className="bg-pink-800">登入</Button>
+        <Button id="login"  variant="outline" className="bg-transparent">登入</Button>
       </DialogTrigger>
       <DialogContent className="sm:max-w-[425px]">
         <DialogHeader>

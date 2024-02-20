@@ -66,7 +66,7 @@ export default function NewVideo({
           muted
           autoPlay
           playsInline
-          poster="/After.jpg"
+          poster="/poster.png"
           className="rounded-xl"
         >
           <source src={src} />

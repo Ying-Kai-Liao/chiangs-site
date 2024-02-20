@@ -6,21 +6,6 @@ import Image from "next/image";
 
 const MAX_FILE_SIZE = 4.5 * 1024 * 1024; // 4.5 MB in bytes
 
-async function fetchAndConvertToBlob(cdnImageUrl: string) {
-  try {
-    const response = await fetch(cdnImageUrl);
-    if (!response.ok) {
-      throw new Error(`Failed to fetch image: ${response.status}`);
-    }
-
-    const imageBlob = await response.blob();
-    return imageBlob;
-  } catch (error) {
-    console.error("Error fetching and converting image:", error);
-    return null;
-  }
-}
-
 function FileUpload() {
   const session = useSession();
   const [selectedFile, setSelectedFile] = useState<File | null>(null);

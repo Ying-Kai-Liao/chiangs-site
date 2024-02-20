@@ -22,7 +22,7 @@ const Footer = () => {
           {width > 768 && (
             <div className="w-40 mr-16 ">
               <Link href={"/"}>
-                <Image src={'/vercel.svg'} alt="" width={100}
+                <Image src={'/poster.png'} alt="" width={100}
                     height={100}/>
               </Link>
             </div>
