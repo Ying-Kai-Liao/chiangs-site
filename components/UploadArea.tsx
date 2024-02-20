@@ -6,7 +6,7 @@ import { FiArrowRight } from "react-icons/fi";
 import { AnimatePresence, motion } from "framer-motion";
 
 const AccordionSolutions = () => {
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
   return (
     <section className="px-8 py-12 ">
       <div className="w-[70vw] mx-auto gap-8 ">
