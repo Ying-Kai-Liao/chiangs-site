@@ -49,7 +49,7 @@ const NavBar = () => {
       >
         <div className="container mx-auto max-w-[1170px] flex items-center font-small justify-between py-3 space-x-5">
           <Link href={"/"} className="w-[120px] md:w-[150px] py-3 md:py-2">
-            <Image src="/poster.png" alt='logo' width={300} height={100}/>
+            <Image src="https://cdn.discordapp.com/attachments/1204070917026881617/1209507389238415400/poster.png?ex=65e72c89&is=65d4b789&hm=3d0e43391d21cfaa994bc0f486af37d3c1b853de81d26ed126309fce35f72673&" alt='logo' width={300} height={100}/>
           </Link>
           <div className="grow"></div>
           <NavMenu />

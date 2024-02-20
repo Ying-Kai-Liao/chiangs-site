@@ -22,7 +22,7 @@ const Footer = () => {
           {width > 768 && (
             <div className="w-40 mr-16 ">
               <Link href={"/"}>
-                <Image src={'/poster.png'} alt="" width={100}
+                <Image src={'https://cdn.discordapp.com/attachments/1204070917026881617/1209507389238415400/poster.png?ex=65e72c89&is=65d4b789&hm=3d0e43391d21cfaa994bc0f486af37d3c1b853de81d26ed126309fce35f72673&'} alt="" width={100}
                     height={100}/>
               </Link>
             </div>

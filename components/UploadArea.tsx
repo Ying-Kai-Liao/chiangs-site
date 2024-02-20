@@ -56,7 +56,7 @@ const Solution = ({
         className="p-6 rounded-[7px] bg-slate-700 flex flex-col justify-between  relative z-20"
       >
         <div className="flex flex-col items-center justify-center ">
-          <Image src="/upload_bg.png" alt="uploadBG" width={800} height={640} />
+          <Image src="https://cdn.discordapp.com/attachments/1204070917026881617/1209507388839960677/upload_bg.png?ex=65e72c89&is=65d4b789&hm=e595dabf809d9ae6ccfcc105c5e2dcc5cc496dc6f50007658fb355386d180513&" alt="uploadBG" width={800} height={640} />
         </div>
         <div>
           {/* <motion.p
